@@ -1,0 +1,97 @@
+extends layout
+append vars
+	- title = 'Сравнения | Стигма'
+block content
+	- let count = 4;
+	.container
+		+crumbs([ ['Главная', '/'], ['Сравнения', '/compaire.html'] ], 1)
+	section
+		.container
+			.block-title Сравнения
+			.compaire-page
+				.compaire-products
+					ul.compaire-products__list.js-compaire-products__list
+						- for (let i = 0; i < count; i++)
+								li
+									.compaire-products__img
+										img(src="images/goods.png", alt="")
+									a(href="/") Acuvue Advance  Hydraclear
+									span Артикул: 12345
+									button(class="close compaire-product__remove js-remove" type="button" data-dismiss="modal" aria-label="Close")
+										span(aria-hidden="true") ×
+									a(href="#").button.button-transparent.button-small.compaire-products__btn Купить
+					.compaire-products__control
+						button.carousel__control.compaire__control.compaire__control--next.js-compaire__control-next
+							span
+								+icon('prev')
+						button.carousel__control.compaire__control.compaire__control--prev.js-compaire__control-prev
+							span
+								+icon('next')
+					ul.compaire-products__table
+						li.compaire-products__table-row
+							.table-title Производитель 
+							.table-value-wrap
+								- for (let i = 0; i < count; i++)
+									.table-value JOHNSON & JOHNSON 
+						li.compaire-products__table-row
+							.table-title Частота замены 
+							.table-value-wrap
+								- for (let i = 0; i < count; i++)
+									.table-value 2 недели	
+						li.compaire-products__table-row
+							.table-title Материал
+							.table-value-wrap
+								- for (let i = 0; i < count; i++)
+									.table-value Панели
+						li.compaire-products__table-row
+							.table-title Диаметр 
+							.table-value-wrap
+								- for (let i = 0; i < count; i++)
+									.table-value 14.00 мм
+						li.compaire-products__table-row
+							.table-title Пропуск кислорода 
+							.table-value-wrap
+								- for (let i = 0; i < count; i++)
+									.table-value 86.0 Dk/t 
+						li.compaire-products__table-row
+							.table-title Пропуск кислорода 
+							.table-value-wrap
+								- for (let i = 0; i < count; i++)
+									.table-value 86.0 Dk/t 
+						li.compaire-products__table-row
+							.table-title Влагосодержание 
+							.table-value-wrap
+								- for (let i = 0; i < count; i++)
+									.table-value 47%
+						li.compaire-products__table-row
+							.table-title УФ-защита 
+							.table-value-wrap
+								- for (let i = 0; i < count; i++)
+									.table-value Есть
+						li.compaire-products__table-row
+							.table-title Количество
+							.table-value-wrap
+								- for (let i = 0; i < count; i++)
+									.table-value 6шт.
+						li.compaire-products__table-row
+							.table-title
+							.table-value-wrap 
+								- for (let i = 0; i < count; i++)
+									.table-value.table-value-btn 
+										a(href='#').button
+											span 1,380
+											+icon('rouble')
+											+icon('cart', 'icon-card--black')
+						li.compaire-products__table-row
+							.table-title
+							.table-value-wrap
+								- for (let i = 0; i < count; i++)
+									.table-value
+										a.table-remove(href="/")
+											button(class="close js-close" type="button" data-dismiss="modal" aria-label="Close")
+												span(aria-hidden="true") ×
+											| Убрать
+block append scripts
+	script(src="js/slider.js")
+						
+

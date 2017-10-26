@@ -1,0 +1,54 @@
+extends layout
+append vars
+	- active = 7
+	- title = 'Контакты | Стигма'
+block content
+	.container
+		+crumbs([['Главная', '/'], ['Контакты', '/contacts.html'] ], 1)
+	section
+		.container
+			.block-title Контакты
+			section.contacts-page
+				.contacts
+					ul.contacts__list
+						li.contacts__item
+							.contacts__item__row
+								.contacts__item__city Дербент
+								.contacts__item__adressess
+									.contacts__item__adressess-street Проспект Агасиева, д 27 (ТЦ «Дербент», 1-ый этаж)
+									.contacts__item__adressess-mode Режим работы: 9:00-17:00 (без выходных)
+									.contacts__item__adressess-phone  +7 (988) 649-72-58
+								.contacts__item__callback
+									button(type="submit").button.js-contacts-bottom записаться
+							.contacts__item__row
+								.contacts__item__adressess
+									.contacts__item__adressess-street ул. Сальмана, 2а
+									.contacts__item__adressess-mode Режим работы: 9:00-17:00 (без выходных)
+									.contacts__item__adressess-phone  +7 (988) 649-74-51
+								.contacts__item__callback
+									button(type="submit").button.js-contacts-bottom записаться
+							.contacts__item__row
+								.contacts__item__adressess
+									.contacts__item__adressess-street ул. 345 ДСД, д.17
+									.contacts__item__adressess-mode Режим работы: 9:00-18:00 (без выходных)
+									.contacts__item__adressess-phone  +7 (988) 649-74-53
+								.contacts__item__callback
+									button(type="submit").button.js-contacts-bottom записаться
+						li.contacts__item
+							.contacts__item__row
+								.contacts__item__city Махачкала
+								.contacts__item__adressess
+									.contacts__item__adressess-street Проспект Акушинского, 29а (магазин Манчестер)
+									.contacts__item__adressess-mode Режим работы: 10:00-20:00 (без выходных)
+									.contacts__item__adressess-phone  +7 (988) 655-27-05
+								.contacts__item__callback
+									button(type="submit").button.js-contacts-bottom записаться
+						li.contacts__item
+							.contacts__item__row
+								.contacts__item__city Нальчик
+								.contacts__item__adressess
+									.contacts__item__adressess-street Проспект Кулиева, д.6
+									.contacts__item__adressess-mode Режим работы: 9:00-18:00 (без выходных)
+									.contacts__item__adressess-phone  +7 (938) 787-00-09
+								.contacts__item__callback
+									button(type="submit").button.js-contacts-bottom записаться

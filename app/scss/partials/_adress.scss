@@ -1,0 +1,105 @@
+.addresses {
+  position: relative;
+  height: 570px;
+
+  @include tablets {
+    height: auto;
+  }
+}
+.addresses__wrapp {
+  display: flex;
+  justify-content: space-between;
+
+  @include tablets {
+    flex-direction: column;
+  }
+}
+.addresses--left {
+  padding-top: 100px;
+  width: 220px;
+}
+
+.addresses--right {
+  position: absolute;
+  right: 0;
+  width: 68%;
+
+  @include tablets {
+    position: relative;
+    width: 100%;
+  }
+}
+
+.addresses__map {
+  height: 570px;
+}
+
+.addresses__list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+
+  font-family: $main-font;
+  color: $light-color;
+  cursor: pointer;
+}
+
+.addresses__list__title {
+  display: inline-block;
+  margin-bottom: 15px;
+
+  &:hover {
+    color: $seconds-color;
+  }
+}
+
+.addresses__sub-list {
+  display: none;
+  margin: 0;
+  padding: 0;
+  padding-left: 20px;
+
+  li {
+    position: relative;
+    padding-bottom: 20px;
+    cursor: pointer;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 22%;
+      left: -9%;
+      width: 10px;
+      height: 3px;
+      background-color: transparent;
+    }
+
+    &:hover:before {
+     background-color: $main-color;      
+    }
+  }
+
+  li.active {
+    &:before {
+      background-color: $main-color;      
+     }
+
+    a {
+      color: $seconds-color;
+    }
+  }
+}
+
+.addresses__sub-list.open {
+  display: block;
+}
+
+.addresses__sub-list__link {
+  color: $light-color;
+  cursor: pointer;
+
+  &:hover {
+    color: $seconds-color;
+  }
+}

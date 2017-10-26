@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800&subset=cyrillic,cyrillic-ext');
+
+@font-face {
+    font-family: "Gotham Pro";
+    src: url('../fonts/GothaProReg.otf');
+}
+
+@font-face {
+    font-family: "Gotham Pro Bold";
+    src: url('../fonts/GothaProBol.otf');
+}
+
+@font-face {
+    font-family: "Gotham Pro Med";
+    src: url('../fonts/GothaProMed.otf');
+}
+
+@font-face {
+    font-family: "Proxima Nova";
+    src: url('../fonts/ProximaNovaReg.otf');
+}
+
+@font-face {
+    font-family: "Proxima Nova Bold";
+    src: url('../fonts/Proxima Nova Bold.otf');
+}
+
+@font-face {
+    font-family: "Proxima Nova Light";
+    src: url('../fonts/Proxima Nova Light.otf');
+}
+
+@font-face {
+    font-family: "rouble";
+    src: url('../fonts/rouble.otf');
+}
+
+:root {
+    --main-color: #ffcb23;
+    --seconds-color: #323232;
+    --light-color: #888888;
+    --main-font: 'Open Sans', sans-serif;
+    --second-font:  "Gotham Pro";
+    --transition-for-top: all .5s ease;
+    --input-height: 55px;
+}
+
+$light-color: #888888;
+$main-font: 'Open Sans';
+$second-font:  "Gotham Pro";
+$seconds-color: #323232;
+$main-color: #ffcb23;

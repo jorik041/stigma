@@ -1,0 +1,52 @@
+.news__body {
+  font-family: $main-font;
+  
+  a {
+    color: $seconds-color;
+  }
+
+  a:hover {
+    color: $main-color;
+  }
+
+  p {
+    margin-bottom: 20px;
+    font-family: $main-font;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    color: $light-color;
+  }
+
+  time  {
+    position: relative;
+    color: $light-color;
+    font-size: 14px;
+
+    &:before {
+      content: '';
+      margin-right: 9px;
+      display: inline-block;
+      vertical-align: bottom;
+      width: 15px;
+      height: 15px;
+      background-image: url("../images/icons/time.png");
+    }
+  }
+
+  .block-title {
+    @include laptop {
+      font-size: 22px;
+    }
+  }
+}
+
+.news__img {
+  margin: auto;
+  width: 315px;
+  height: 250px;
+
+  @include laptop {
+    margin-bottom: 60px;
+  }
+}

@@ -1,0 +1,83 @@
+extends layout
+append vars
+	- title = 'Корзина | Стигма'
+block content
+	.container
+		+crumbs([ ['Главная', '/'], ['Корзина', '/cart.html'] ], 1)
+	section.cart-page
+		.container
+			.block-title Корзина
+			.cart-block
+				ul.cart__list
+					li.cart__item
+						.cart__product_photo
+							img(src="images/cart.png", alt="")
+						.cart__descripton
+							a.cart__product_title(href="/") Acuvue Advance Hydraclear
+							.cart__product_code
+								span Артикул: 
+								span 12345
+							ul.cart__descripton_list
+								li
+									span Сила: 
+									span -0.75
+								li
+									span Кривизна: 
+									span 8.3
+								li
+									span Диаметр: 
+									span 14.0 мм
+								li
+									span Пропуск кислорода: 
+									span 147 Dk/t
+						.cart__count
+							span.cart__total Кол-во: 
+							span.count-up
+							span.count 3 шт.
+							span.count-down
+						.cart__price
+							span.price 
+								span 4,140
+								span
+									+icon('rouble', 'card__rouble')
+						.cart__remove
+							button(class="close js-remove" type="button" data-dismiss="modal" aria-label="Close")
+								span(aria-hidden="true") ×
+					li.cart__item
+						.cart__product_photo
+							img(src="images/cart.png", alt="")
+						.cart__descripton
+							a.cart__product_title(href="/") Acuvue Advance Hydraclear
+							.cart__product_code
+								span Артикул: 
+								span 12345
+							ul.cart__descripton_list
+								li
+									span Сила: 
+									span -0.75
+								li
+									span Кривизна: 
+									span 8.3
+						.cart__count
+							span.cart__total Кол-во: 
+							span.count-up
+							span.count 1 шт.
+							span.count-down
+						.cart__price
+							span.price 
+								span 1,380
+								span
+									+icon('rouble', 'card__rouble')
+						.cart__remove
+							button(class="close js-remove" type="button" data-dismiss="modal" aria-label="Close")
+								span(aria-hidden="true") ×
+				.cart-bay
+					.cart-bay-wrap
+						span.cart__total Итого:
+						span.price 
+							span 5,520
+							span
+								+icon('rouble', 'card__rouble')
+					.button.button--yellow Оформить заказ
+
+

@@ -1,0 +1,315 @@
+.compaire-page {
+  margin-top: rem(100px);
+}
+.compaire-products {
+  position: relative;
+  margin-bottom: 135px;
+}
+
+.compaire-products__list {
+  padding: 0;
+  margin-left: auto;
+  width: 100%;
+  max-width: 890px;
+  display: flex;
+  font-family: $main-font;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: $seconds-color;  
+  
+  @include desktop {
+    max-width: 80%;
+    margin-left: 15vw;
+  }
+
+  @include tablets {
+    max-width: 90%;
+    margin-left: 0;
+    margin: auto;
+  }
+
+  li {
+    position: relative;
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    @include tablets {
+      padding: 0;
+    }
+
+    & > span {
+      color: $light-color; 
+
+      @include phones {
+        display: none;
+      }
+    }
+  
+    a {
+      color: inherit;
+      font-size: 20px;
+
+      //@include laptop {}
+
+      @include laptop {
+        font-size: 16px;
+      }
+
+      @include phones {
+        font-size: 14px;
+      }
+  
+      &:hover {
+        color: $main-color;
+      }
+    }//a
+  }//li
+}
+
+.compaire-products__btn { 
+  padding-right: 0px;
+  padding-left: 0px;
+  display: none;
+  border: 0;
+  font-family: "Gotham Pro";
+
+  @include tablets {
+    display: block;
+  }
+}
+
+.compaire-product__remove {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
+  font-size: 24px;
+  font-weight: lighter;  
+
+
+  @include tablets {
+    display: block;
+  }
+
+  &:hover {
+    color: $main-color;
+  }
+}
+
+.compaire-products__img {
+  margin-bottom: 30px;
+  width: 139px;
+  height: 90px;
+  
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.compaire-products__table {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+
+  font-family: $main-font;
+  font-size: 16px;
+  line-height: 50px;
+  color: $seconds-color;
+
+  @include laptop {
+    font-size: 14px;
+  }
+  
+  & > li {
+    display: flex;
+    align-items: flex-start;
+
+    @include tablets {
+      flex-direction: column;
+    }
+  }
+
+  .slick-initialized .slick-slide {
+    justify-content: flex-start;
+    padding-left: 10px;
+
+    @include tablets {
+      justify-content: center;
+      padding-left: 0px;
+    }
+    
+  }
+}
+
+.js-compaire-products__item {
+  display: flex;
+  align-items: flex-start;
+  width: 74.2%;
+  margin-left: 80px;
+
+  @include laptop {
+    width: 80%;
+    margin-left: 0px;
+  }
+
+  @include tablets {
+    width: 100%;
+  }
+
+  .table-value {
+    text-align: left;
+    font-size: 14px;
+  }
+
+  .table-value-btn  {
+    margin:0 10px;
+  }
+}
+
+.table-title {
+  color: $light-color;
+  width: 262px;
+
+  @include desktop {
+    width: 160px;
+  }
+
+  @include tablets {
+    color: $seconds-color;
+    font-weight: 600;
+  }
+}
+
+.table-value {
+  text-align: left;
+  width: 168px;
+  margin-left: auto;
+
+  @include tablets {
+    line-height: 24px;
+  }
+
+  @include phones {
+    margin-left: inherit;
+  }
+
+  .button {
+    padding: 20px;
+    font-size: 18px;
+    line-height: 24px;
+
+    @include tablets {
+      display: none;
+    }
+
+    span, .icon {
+      vertical-align: baseline;
+    }
+
+    .icon-cart {
+      margin-left: 20px;
+    }
+  }
+}
+
+.table-remove {
+  margin-top: 30px;
+  display: inline-block;
+  width: 100%;
+  font-family: $main-font;
+  font-size: 16px;
+  text-align: center;
+  color: $light-color;
+  line-height: 24px;
+
+  @include tablets {
+    display: none;
+  }
+
+  &:hover, &:hover button {
+    color: $main-color;
+  }
+
+  button.close {
+    padding-right: 8px;
+    font-size: 30px;
+    font-weight: lighter;
+  }
+}
+
+.table-value-btn {
+
+  @include desktop {
+    margin-right: 10px;
+  }
+  
+  @include tablets {
+    display: none;
+  }
+}
+
+.more-then-4 {
+  .compaire-products__table-row {
+    display: inline-block;
+  }
+
+  .table-value {
+    margin-left: inherit;
+  }
+}
+
+.compaire__control--next {
+  position: absolute;
+  top: 7%;
+  left: 150px;
+  font-size: 40px;
+
+  @include desktop {
+    left: 110px;
+  }
+
+  @include laptop {
+    left: 12%;  
+  }
+
+  @include tablets {
+    left: -1%;
+  }
+}
+
+.table-value-wrap {
+  display: flex;
+  align-items: flex-start;
+  width: 80%;
+}
+
+.compaire__control--prev {
+  position: absolute;
+  top: 7%;
+  right: -35px;
+  font-size: 40px;
+
+  @include desktop {
+    right: -10px;
+  }
+
+  @include laptop {
+    right: -0.5%;
+  }
+
+  @include tablets {
+    right: -1%;
+  }
+}
+
+button.compaire__control {
+  display: none;
+}
+

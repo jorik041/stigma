@@ -1,0 +1,254 @@
+.menu-left {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    z-index: 1050;
+    display: flex;
+    flex-direction: column;
+    width: 28.5%;
+    min-width: 355px;
+    height: 100%;
+    overflow: scroll;
+    background-color: var(--seconds-color);
+    transition: var(--transition-for-top);
+
+    @include desktop {
+        left: -370px;
+        min-width: 320px;
+    }
+
+    @include laptop {
+        left: -100%;
+        min-width: 305px;
+        width: 31.5%;
+    }
+
+    @include tablets {
+        min-width: 300px;
+    }
+
+    @include phones {
+        left: -110%;
+        min-width: 280px;
+    }
+}
+
+.menu-left {
+
+    .call-to-action {
+        margin-top: rem(60px);
+        margin-left: auto;
+        margin-bottom: rem(25px);
+        margin-right:0;
+        border: 0;
+        background: var(--main-color);
+        text-align: center;
+        text-transform: none;
+        letter-spacing: 0;
+        font-weight: 600;
+        font-size: 16px; 
+
+        a {
+            padding: 20px rem(55px);
+        }
+
+        @include tablets {
+            margin-top: 4.3rem;
+        }
+
+        @include phones {
+            margin-top: 5rem;
+        }
+    }
+
+    .nav__right {
+        height: 80%;
+        max-height: 650px;
+        min-height: 430px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        text-align: right;
+    }
+
+    .nav__list {
+        height: 50%;
+        flex-direction: column;
+        justify-content: flex-start;
+        font-size: 13px;
+
+        li {
+            border-right: 5px solid transparent;
+            padding-right: 25px;
+
+            &:hover {
+                border-right-color: var(--main-color);
+            }
+
+            a {
+                display: inline-block;
+                width: 100%;
+                padding: rem(8px) 0;
+                color: #fff; 
+
+                @include phones {
+                    padding: 5px 0;
+                    font-size: 14px;
+                }
+            }
+        }
+
+        li.active {
+            border-right-color: $main-color;
+        }
+    }//.menu-left .nav__list
+
+    .nav__list:first-child li {
+        &:hover a {
+            color: var(--main-color);
+        }
+    }
+
+    .nav__list+.nav__list {
+        margin-top: auto;
+
+        a {
+            color: #888888;
+        }
+
+        li.active a {
+            color: $main-color;
+        }
+    }
+
+    .nav__link {
+        font-weight: 500;
+    }
+}
+
+.menu-left.open {
+    left: 0;
+    transition: var(--transition-for-top);
+}
+
+.menu-left.open.open-serch-on-mobile {
+    left: -190px;
+}
+
+.container-burger {
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    @include desktop {
+        width: 95%;        
+    }
+}
+
+.burger-wrap {
+    position: absolute;
+    display: none;
+    width: 20px;
+    z-index: 1060;
+    top: -28px;
+    left: 0%;
+
+    @include laptop {
+        display: block;
+        top: -32px;
+    }
+
+    @include tablets {
+        top: 25px;
+        left: .5%;
+    }
+
+    @include phones { 
+        //top: 25px;
+        left: 2%;  
+    }
+}
+
+.burger {
+    position: fixed;
+    z-index: 13;
+    cursor: pointer;
+    display: block;
+}
+
+.burger span{
+    background: var(--seconds-color);
+    display: block;
+    width: 20px;
+    height: 3px;
+    margin-bottom: 3px;
+    position: relative;
+    top: 0;
+    transition: all ease-in-out 0.4s;
+}
+
+.burger-wrap.open span:nth-child(2){
+    width: 0;
+    opacity: 0;
+}
+
+.burger-wrap.open span:nth-child(3){
+    transform: rotate(-45deg);
+    transform-origin: right center;
+    top: -13px;
+    background: #fff;
+}
+
+.burger-wrap.open span:nth-child(1){
+    transform: rotate(45deg);
+    transform-origin: right center;
+    top: 13px;
+    background: #fff;
+    transition: var(--transition-for-top);
+}
+
+.search-block {
+    position: fixed;
+    top: 0;
+    z-index: 1050;
+    left: -100%;
+    width: 466px;
+    height: 100vh;
+    background-color: #fff;
+
+    .search__input {
+        border: 0;
+        border-bottom: 1px solid #ccc;
+        height: 60px;
+        outline: none;
+        width: 100%;
+    }
+
+    @include phones {
+        left: -1000%;
+    }
+}
+
+.open.search-block {
+    transition: var(--transition-for-top);
+    display: block;
+    left: 28%;
+
+    @include laptop {
+        left: 33%;
+        width: 40%;
+        min-width: 420px;
+    }
+
+    @include tablets {
+        left: 38%;
+        width: 33%;
+        min-width: 285px;
+    }
+
+    @include tablets {
+        width: 80%;
+        min-width: 285px;
+    }
+}
+  

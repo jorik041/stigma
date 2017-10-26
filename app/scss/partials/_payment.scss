@@ -1,0 +1,31 @@
+
+
+.section__list {
+  padding: 0;
+  padding-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @include tablets {
+    flex-direction: column;
+  }
+
+  li {
+    margin-bottom: 80px;
+    width: 44%;
+    font-family: $main-font;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    color: $light-color;
+
+    @include tablets {
+      width: 100%;
+    }  
+
+    p span {
+      color: $seconds-color;
+    }
+  }
+}

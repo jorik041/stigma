@@ -1,0 +1,71 @@
+extends layout
+append vars
+	- title = 'Оформление заказа | Стигма'
+block content
+	.container
+		+crumbs([['Главная', '/'], ['Корзина', '/cart.html'],['Оформление заказа', '/ordering.html']], 2)
+	section
+		.container
+			.block-title Оформление заказа
+			.ordering
+				form.js-form.form.reviews__form
+					.form-group
+						.input__wrap
+							input.form__input(type="text" id="name" name="name" )
+							button(class="close clear js-clear" type="button" data-dismiss="modal" aria-label="Close")
+								span(aria-hidden="true") ×
+							label(for="name") Ваше имя
+						#error_msg Введите ваше имя
+					.form-group
+						.input__wrap
+							input.form__input(type="phone" id="phone" name="phone" )
+							button(class="close clear js-clear" type="button" data-dismiss="modal" aria-label="Close")
+								span(aria-hidden="true") ×
+							label(for="phone") Ваш телефон
+						#error_msg Введите ваше телефон
+					.form-group
+						.input__wrap
+							input.form__input(type="phone" id="phone" name="phone" )
+							button(class="close clear js-clear" type="button" data-dismiss="modal" aria-label="Close")
+								span(aria-hidden="true") ×
+							label(for="phone") E-mail
+						#error_msg Введите ваш E-mail
+					.form-group
+						select.form__select
+							option(value="payment_method"  class="placeholder" selected disabled) Выберите способ доставки
+							option(value="courier") Курьер
+							option(value="pickup") Самовывоз
+					.form-group
+						.input__wrap
+							input.form__input(type="text" id="adress" name="phone" )
+							button(class="close clear js-clear" type="button" data-dismiss="modal" aria-label="Close")
+								span(aria-hidden="true") ×
+							label(for="phone") Адрес доставки
+						#error_msg Введите адрес доставки
+					.form-group
+						.input__wrap
+							textarea.form__textarea(name="comment", id="comment" cols="30", rows="10" )
+							label(for="comment") Дополнительные комментарии
+					.form-group
+						.form__checkbox
+							input(type="checkbox", name="agreement" id='agreement')
+							label.text-light(for='agreement')
+								span.form__checkbox__fake
+								span.form__checkbox__label.form__checkbox__label--text Нажимая на кнопку «Оформить заказ», Вы принимаете условия 
+									a(href="http://" class='bold') Договора
+									| , а также подтверждаете согласие на обработку персональных данных
+					.form-group
+						.form__checkbox
+							input(type="checkbox", name="subscribe" id='subscribe')
+							label.text-light(for='subscribe')
+								span.form__checkbox__fake
+								span.form__checkbox__label.form__checkbox__label--text Я хочу получать по электронной почте информацию о ценах и специальных предложениях Оптика Стигма
+					.form-group.form__input_left.form__input_captcha
+						.cart-bay-wrap
+							span.cart__total Итого:
+							span.price 
+								span 5,520
+								span
+									+icon('rouble', 'card__rouble')
+					.form-group.form__input_right
+							button(type="submit").button.js-bottom Оформить заказ

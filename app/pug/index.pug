@@ -1,0 +1,251 @@
+extends layout
+append vars
+	- body.classList.push('page-index')
+	- title = 'Главная | Стигма'
+block content	
+	.carousel__main
+		ul.carousel__main_list.container
+			li.carousel__item
+				.carousel__img-wrap
+					img(src="images/sldr.png", alt="Линзы в подарок")
+				span
+					h2 При проверке зрения линзы в подарок
+					.carousel__call.call-to-action
+						a(href="") Записаться на прием
+			a(href="").carousel__main__control.carousel__control--prev
+				span
+					svg#icon-slide-prev(viewbox='0 0 40 40')
+						rect#slide-prev(width='40', height='40')
+						polygon#slide-prev-arr(points='18.55 20.3 24.57 26.32 23.86 27.02 23.16 27.73 15.69 20.27 15.44 20 15.7 19.75 17.14 18.3 23.16 12.27 24.57 13.68 18.54 19.7 18.25 20 18.55 20.3')
+			a(href="").carousel__main__control.carousel__control--next
+				span
+					svg#icon-slide-next( viewbox='0 0 40 40')
+						rect(width='40', height='40', transform='translate(40 40) rotate(180)')
+						polygon#slide-next-arr(points='21.45 19.7 15.44 13.69 16.14 12.97 16.84 12.27 24.32 19.73 24.57 20 24.3 20.25 22.86 21.7 16.84 27.73 15.44 26.32 21.46 20.3 21.75 20 21.45 19.7')
+	section.about
+		.container.about__wrap
+			.about--right
+				h2.block-title Стигма - это
+				p.abot__text Компания работающая на рынке оптики с 1998 года. За это время мы накопили солидный опыт, и массу хороших отзывов.
+			.about--left
+				ul.about__list
+					li
+						span
+							+icon('person', 'about__icon')
+						p Квалифицированный персонал и современное оборудование
+					li
+						span
+							+icon('distributor', 'about__icon')
+						p Официальный дистрибьютер мировых марок оптики
+					li
+						span
+							+icon('assort', 'about__icon')
+						p Широкий ассортимент товаров и демократичные цены
+					li
+						span
+							+icon('service', 'about__icon')
+						p Клиентоореентированный сервис
+	section.popular
+		.container.carousel
+			.carousel--left
+				.block-title Популярные товары
+				ul.popular--left__list
+					li
+						span Контактые линзы
+					li
+						span Солнцезащитные очки
+					li
+						span Оправы
+					li
+						span.active Линзы
+					li
+						span Аксессуары
+					li
+						span Распродажа
+				.popular__controls
+					button.carousel__control.carousel__control--grey.popular--prev
+						span
+							+icon('arrow_left')
+					button.carousel__control.carousel__control--grey.popular--next
+						span
+							+icon('arrow_right')
+			.carousel--right
+				ul.carousel__list.popular--right__list.goods__list
+					li
+						img(src="images/goods.png", alt="Товар")
+						h3 Acuvue Oasys
+						p Cиликон-гидрогелевые линзы для длительного ношения
+						a(href="", class="popular__compaire") 
+								span
+									+icon('compaire', 'popular__icon')
+								span Добавить к сравнению
+						a(href="", class="popular__bay") 
+							span(title='Купить') 1,380
+							span.popular__rouble
+								+icon('rouble')
+							span.popular__card
+								+icon('cart', 'popular__icon-card')
+					li
+						img(src="images/goods.png", alt="Товар")
+						h3 Acuvue Oasys
+						p Cиликон-гидрогелевые линзы для длительного ношения
+						a(href="", class="popular__compaire") 
+								span
+									+icon('compaire', 'popular__icon')
+								span Добавить к сравнению
+						a(href="", class="popular__bay") 
+							span(title='Купить') 1,380
+							span.popular__rouble
+								+icon('rouble')
+							span.popular__card
+								+icon('cart', 'popular__icon-card')
+					li
+						img(src="images/goods.png", alt="Товар")
+						h3 Acuvue Oasys
+						p Cиликон-гидрогелевые линзы для длительного ношения
+						a(href="", class="popular__compaire") 
+								span
+									+icon('compaire', 'popular__icon')
+								span Добавить к сравнению
+						a(href="", class="popular__bay") 
+							span(title='Купить') 1,380
+							span.popular__rouble
+								+icon('rouble')
+							span.popular__card
+								+icon('cart', 'popular__icon-card')
+					li
+						img(src="images/goods.png", alt="Товар")
+						h3 Acuvue Oasys
+						p Cиликон-гидрогелевые линзы для длительного ношения
+						a(href="", class="popular__compaire") 
+								span
+									+icon('compaire', 'popular__icon')
+								span Добавить к сравнению
+						a(href="", class="popular__bay") 
+							span(title='Купить') 1,380
+							span.popular__rouble
+								+icon('rouble')
+							span.popular__card
+								+icon('cart', 'popular__icon-card')
+	section.brands
+		.container.brands__wrap
+			ul.brands__list
+				li
+					img(src="images/brands/prada.png", alt="prada")
+				li
+					img(src="images/brands/dior.png", alt="dior")
+				li
+					img(src="images/brands/guess.png", alt="guess")
+				li
+					img(src="images/brands/gucci.png", alt="guess")
+				li
+					img(src="images/brands/ck.png", alt="ck")
+			.brands__controls
+				button.carousel__control.carousel__control--grey.brands--prev
+					span
+						+icon('arrow_left')
+				button.carousel__control.carousel__control--grey.brands--next
+					span
+						+icon('arrow_right')
+	section.service
+		.container
+			.service__block
+				.block-title Кабинет охраны зрения детей
+				.service__text Детское аппаратное лечение зрения. Регулярные осмотры детей 
+					| необходимы для раннего выявления патологических изменений,
+					| поскольку они требуют незамедлительного лечения и в случае
+					| несвоевременной диагностики приводят к...  
+					a(href="/koz.html") Подробнее
+				.service__call.call-to-action 
+					a(href="") Записаться на прием
+	section.instagram
+		include partials/get-insta
+	section.reviews
+		.container.carousel
+			.carousel--left
+				.block-title Отзывы
+				p.carousel__text  Отзывы наших клиентов о нашей работе и сервисе обслуживания
+				a(href="/reviews.html") Все отзывы
+				.reviews__control
+					button.carousel__control.carousel__control--grey.reviews--prev
+						span
+							+icon('arrow_left')
+					button.carousel__control.carousel__control--grey.reviews--next
+						span
+							+icon('arrow_right')
+			.carousel--right.js-carousel--right
+				ul.carousel__list.reviews__list
+					li
+						span
+							p Бысрое и качественное обслуживание, доброжелательный и квалифицированный персонал. Все капитальные крассавчики жи есть ))
+						div
+							span.avatar
+								img(src="images/reviews/reviews.png", alt="Отзыв")
+							p Альберт Саутиев
+					li
+						span
+							p Бысрое и качественное обслуживание, доброжелательный и квалифицированный персонал. Все капитальные крассавчики жи есть ))
+						div
+							span.avatar
+								img(src="images/reviews/reviews.png", alt="Отзыв")
+							p Альберт Саутиев
+					li
+						span
+							p Бысрое и качественное обслуживание, доброжелательный и квалифицированный персонал. Все капитальные крассавчики жи есть ))
+						div
+							span.avatar
+								img(src="images/reviews/reviews.png", alt="Отзыв")
+							p Альберт Саутиев
+					li
+						span
+							p Бысрое и качественное обслуживание, доброжелательный и квалифицированный персонал. Все капитальные крассавчики жи есть ))
+						div
+							span.avatar
+								img(src="images/reviews/reviews.png", alt="Отзыв")
+							p Альберт Саутиев
+	section.addresses
+		.container.addresses__wrapp
+			.addresses--left
+				.block-title Наши  салоны
+				ul.addresses__list
+					li 
+						span.addresses__list__title Дербент
+						ul.addresses__sub-list.open
+							li.active
+								a.addresses__sub-list__link(href="") пр-кт Агасиева, д. 27д. 
+							li
+								a.addresses__sub-list__link(href="") ул. Сальмана, 2
+							li
+								a.addresses__sub-list__link(href="") ул. 345 ДСД, 17 
+					li 
+						span.addresses__list__title Махачкала 
+						ul.addresses__sub-list
+							li
+								a.addresses__sub-list__link(href="")   
+							li
+								a.addresses__sub-list__link(href="") 
+							li
+								a.addresses__sub-list__link(href="")
+					li 
+						span.addresses__list__title Нальчик
+						ul.addresses__sub-list
+							li
+								a.addresses__sub-list__link(href="") 
+							li
+								a.addresses__sub-list__link(href="") 
+							li
+								a.addresses__sub-list__link(href="") 
+			.addresses--right
+				#map.addresses__map
+	.instagram__call-to-action
+		.container.subscribe
+			span Всё самое новое от Оптики «Стигма»:
+			.subscribe__block
+				input(type="text",name="subcribe", placeholder="Ваш e-mail").subscribe__input
+				input(type="submit", value="Подписаться").subscribe__input_btn
+block append scripts
+	script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
+	script(src="js/map.js")
+	script(src="js/slider.js")
+
+

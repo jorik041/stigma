@@ -1,0 +1,34 @@
+extends layout
+append vars
+	- title = 'Страница не найдена | Стигма'
+block content
+	.container
+		+crumbs([['Главная', '/'], ['404', '/404.html']], 1)
+	section
+		.container
+			.block-title 404
+			section.not-found-page
+				.not-found-page__img
+					img(src="images/404.png", alt="Страница не найдена")
+				.not-found-page__body
+					.not-found-page__title
+						| Если страницу не видно значит её не существует
+					.not-found-page__text
+						span Вы конечно можете поднапрячь зрение и попытаться найти нужный вам товар на этой странице, но всё же рекомендуем: 
+						ul.not-found-page__list
+							li  1. Воспользоваться формой поиска выше
+							li 2. Позвонить нашему оператору по номеру 8 800 111 22 33
+							li 3. Поискать товар на странице соответствующей категории: 
+								ul.not-found-page__links
+									li
+										a(href="#") Контактные линзы  
+									li
+										a(href="#") Солнцезащитные очки 
+									li
+										a(href="#") Оправы 
+									li
+										a(href="#") Линзы
+									li
+										a(href="#") Аксессуары
+					
+					

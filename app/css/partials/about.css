@@ -1,0 +1,8 @@
+.section__list li {
+  font-family: "Open Sans";
+  font-size: 16px;
+  font-weight: 400; }
+  .section__list li p {
+    margin: 0; }
+
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFib3V0LmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLHlCQUF5QjtFQUN6QixnQkFBZ0I7RUFDaEIsaUJBQWlCLEVBQUU7RUFDbkI7SUFDRSxVQUFVLEVBQUUiLCJmaWxlIjoicGFydGlhbHMvYWJvdXQuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnNlY3Rpb25fX2xpc3QgbGkge1xuICBmb250LWZhbWlseTogXCJPcGVuIFNhbnNcIjtcbiAgZm9udC1zaXplOiAxNnB4O1xuICBmb250LXdlaWdodDogNDAwOyB9XG4gIC5zZWN0aW9uX19saXN0IGxpIHAge1xuICAgIG1hcmdpbjogMDsgfVxuIl19 */

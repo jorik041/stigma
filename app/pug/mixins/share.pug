@@ -1,0 +1,8 @@
+mixin share(arr)
+  .share
+    span Поделиться:
+    ul.socials__list
+      each item in arr
+        li
+          a(href="")
+            +icon(`${item}`, 'social__icon')

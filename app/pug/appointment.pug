@@ -1,0 +1,118 @@
+extends layout
+append vars
+	- active = 7
+	- title = 'Записаться на прием | Стигма'
+block content
+	.container
+		+crumbs([ ['Главная', '/'], ['Контакты', '/contacts.html'], ['Записаться на прием', '/appointment.html'] ], 2)
+	section
+		.container
+			.block-title Записаться на прием к врачу-офтальмологу
+			.appointment
+				.appointment__block
+					.appointment--left
+						.clinic-description
+							.clinic-description__header
+								h1 Дербент, проспект Агасиева, д. 27  (ТЦ "Дербент", 1-ый этаж)
+								p Режим работы: 9:00-17:00 (без выходных)
+								span  +7 (988) 649-72-58
+							p В нашем салоне Вам проведут предварительный тест с использованием авторефкератометра, проверят остроту зрения с помощью фороптера с окончательной детализацией рецепта. Проведут презентацию прогрессивных линз и примерку контактных линз, если Вы заинтересованы в их использовании. Выпишут рецепт и объяснят его детали. Выдадут личные рекомендации для выбора наилучшего решения.
+					.appointment--right.appointment__gallery
+						.gallery.gallery__clinics
+							ul.gallery__outter.gallery__clinics__outter.js-gallery__clinics
+								- for(let i = 0; i < 3; i++)
+									li.gallery__outer-item
+										img(src="images/clinics/clinics-big.png", alt="")
+							ul.gallery__thumbs.gallery__clinics__thumbs.js-gallery__clinics__thumbs
+								- for(let i = 0; i < 3; i++)
+									li.gallery__thumbs-item
+										img(src="images/clinics/clinics-mini.png", alt="")
+							.gallery__control-wrqp
+								button.carousel__control.gallery__control.gallery__control--next.js-gallery__control-next
+									span
+										+icon('prev')
+								button.carousel__control.gallery__control.gallery__control--prev.js-gallery__control-prev
+									span
+										+icon('next')
+				.appointment__block
+					.appointment--left
+						.appointment__form
+							.appointment__form--title Для записи заполните поля ниже:
+							form.js-form.form.reviews__form
+								.form-group
+									.input__wrap
+										input.form__input(type="text" id="name" name="name" )
+										button(class="close clear js-clear" type="button" data-dismiss="modal" aria-label="Close")
+											span(aria-hidden="true") ×
+										label(for="name") Имя
+									#error_msg Введите ваше имя
+								.form-group
+									.input__wrap
+										input.form__input(type="phone" id="phone" name="phone" )
+										button(class="close clear js-clear" type="button" data-dismiss="modal" aria-label="Close")
+											span(aria-hidden="true") ×
+										label(for="phone") Фамилия
+									#error_msg Введите вашу фамилию
+								.form-group
+									.input__wrap
+										input.form__input(type="phone" id="phone" name="phone" )
+										button(class="close clear js-clear" type="button" data-dismiss="modal" aria-label="Close")
+											span(aria-hidden="true") ×
+										label(for="phone") Ваш телефон
+									#error_msg Введите ваше телефон
+								.form-group
+									.input__wrap
+										input.form__input(type="phone" id="phone" name="phone" )
+										button(class="close clear js-clear" type="button" data-dismiss="modal" aria-label="Close")
+											span(aria-hidden="true") ×
+										label(for="phone") E-mail
+									#error_msg Введите ваш E-mail
+								.form-group.form__input_left
+									.input__wrap
+										input.form__input(type="text" id="adress" name="phone" )
+										button(class="close clear js-clear" type="button" data-dismiss="modal" aria-label="Close")
+											span(aria-hidden="true") ×
+										label(for="phone") Дата
+										span.form__input_icon
+											+icon('calendar')
+									#error_msg Введите дату
+								.form-group.form__input_right
+									.input__wrap
+										input.form__input(type="text" id="adress" name="phone" )
+										button(class="close clear js-clear" type="button" data-dismiss="modal" aria-label="Close")
+											span(aria-hidden="true") ×
+										label(for="phone") Время
+										span.form__input_icon
+											+icon('time')
+									#error_msg Введите время
+								.form-group
+									button(type="submit").button.js-bottom Записаться на проверку
+					.appointment--right
+						#map.appointment__map
+block append scripts
+	script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
+	script(src="js/slider.js")
+	script.
+		ymaps.ready(function(){
+			var myMap = new ymaps.Map('map', {
+						center: [ 42.97700507447011, 47.47518149999989 ],
+						zoom: 17, 
+						controls: []
+				}),
+				myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+						hintContent: 'Собственный значок метки'
+				}, {
+						// Опции.
+						// Необходимо указать данный тип макета.
+						iconLayout: 'default#image',
+						// Своё изображение иконки метки.
+						iconImageHref: '../images/map.png',
+						// Размеры метки.
+						iconImageSize: [30, 42],
+						// Смещение левого верхнего угла иконки относительно
+						// её "ножки" (точки привязки).
+						iconImageOffset: [-5, -38]
+				});
+
+				myMap.geoObjects.add(myPlacemark);
+		})

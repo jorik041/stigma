@@ -1,0 +1,8 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700&subset=cyrillic,cyrillic-ext");
+:root {
+  ---main-color: #ffcb23;
+  --seconds-color: #323232;
+  --light-color: #888888;
+  --main-font: 'Open Sans', sans-serif; }
+
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInZhcnMuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLCtHQUErRztBQUMvRztFQUNFLHVCQUF1QjtFQUN2Qix3QkFBd0I7RUFDeEIsdUJBQXVCO0VBQ3ZCLHFDQUFxQyxFQUFFIiwiZmlsZSI6InBhcnRpYWxzL3ZhcnMuY3NzIiwic291cmNlc0NvbnRlbnQiOlsiQGltcG9ydCB1cmwoXCJodHRwczovL2ZvbnRzLmdvb2dsZWFwaXMuY29tL2Nzcz9mYW1pbHk9T3BlbitTYW5zOjMwMCw0MDAsNDAwaSw3MDAmc3Vic2V0PWN5cmlsbGljLGN5cmlsbGljLWV4dFwiKTtcbjpyb290IHtcbiAgLS0tbWFpbi1jb2xvcjogI2ZmY2IyMztcbiAgLS1zZWNvbnMtY29sb3I6ICMzMjMyMzI7XG4gIC0tbGlnaHQtY29sb3I6ICM4ODg4ODg7XG4gIC0tbWFpbi1mb250OiAnT3BlbiBTYW5zJywgc2Fucy1zZXJpZjsgfVxuIl19 */

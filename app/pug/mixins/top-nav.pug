@@ -1,0 +1,10 @@
+mixin topNav()
+  ul.nav__list
+   - const navArr = [['О нас', '/about.html'], ['Акции', '/sale.html'], ['Товары', '/products-cart.html'], ['Услуги', '/'],['Новости', '/news.html'],['Полезное', '/'],['Оплата и доставка','/payment.html'], ['Контакты', '/contacts.html']]
+    each value, key in navArr
+      if active === key
+        li.active
+          a(href=`${value[1]}`) #{value[0]}
+      else
+        li
+          a(href=`${value[1]}`) #{value[0]}

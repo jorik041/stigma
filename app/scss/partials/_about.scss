@@ -1,0 +1,49 @@
+.section__list {
+  li {
+
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: $light-color;
+
+    p {
+      margin: 0;
+    }
+  }
+}
+
+.section__item_title  {
+  color: $seconds-color;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.about-page-icon {
+  display: inline-block;
+  margin-bottom: 35px;
+}
+
+.certificates .carousel__text {
+  @include phones {
+    display: block;
+  }
+}
+
+.certificates__list li {
+  padding: 0 20px;
+}
+
+div.certificates__control {
+  bottom: 37%;
+
+  @include tablets {
+    bottom: 72%;
+    left: 3%;
+  }
+
+  @include phones {
+    bottom: 75%;
+  }
+}
+

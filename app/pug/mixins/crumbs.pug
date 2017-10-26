@@ -1,0 +1,10 @@
+mixin crumbs(crumbsArr, ndx)
+  .crumbs
+    ul.crumbs__list
+      each value, key in crumbsArr
+        if key === ndx
+          li.active
+            a(href=`${value[1]}`) #{value[0]}
+        else
+          li
+            a(href=`${value[1]}`) #{value[0]}

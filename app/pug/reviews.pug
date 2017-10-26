@@ -1,0 +1,47 @@
+extends layout
+append vars
+	- title = 'Отзывы | Стигма'
+block content
+	.container
+		+crumbs([ ['Главная', '/'], ['Отзывы', '/reviews.html']], 1)
+	section
+		.container
+			.block-title Отзывы
+			section.reviews-page
+				.reviews__form__wrap
+					form.js-form.form.reviews__form
+						.reviews-page__title Оставьте свой отзыв:
+						.form-group.reviews__input_left
+							.input__wrap
+								input.form__input(type="text" id="name" name="name" )
+								button(class="close clear js-clear" type="button" data-dismiss="modal" aria-label="Close")
+									span(aria-hidden="true") ×
+								label(for="name") Ваше имя
+							#error_msg Введите ваше имя
+						.form-group.reviews__input_right
+							.input__wrap
+								input.form__input(type="phone" id="phone" name="phone" )
+								button(class="close clear js-clear" type="button" data-dismiss="modal" aria-label="Close")
+									span(aria-hidden="true") ×
+								label(for="phone") E-mail
+							#error_msg Введите ваш E-mail
+						.form-group
+							.input__wrap
+								textarea.form__textarea(name="comment", id="comment" cols="30", rows="10" )
+								label(for="comment") Комментарий
+						.form-group.form__input_left.form__input_captcha
+								button(type="submit").button.button--grey.button--small.bottom-captcha Captcha
+								input.form__input(type="text" id="captcha" name="captcha" )
+						.form-group.form__input_right
+								button(type="submit").button.js-bottom Оставить комментарий	
+			section.reviews-page__list
+				- for (let i = 0; i < 2; i++)
+					.reviews-page__item
+						.reviews-page__item__header
+							.reviews-page__item__img
+								img(src="images/rev.png", alt="")
+							.reviews-page__item__name
+								span Оптикастигмыч
+								time 18 июля 2017
+						.reviews-page__item__body Диагностика проходит оперативно и абсолютно безболезненно, поскольку обследуется сразу оба глаза в  течение нескольких секунд на расстоянии одного метра и без расширения зрачка, то есть без закапывания капель. Ребенок не устает, так как процесс скринига проходит в игровой форме. Большим плюсом авторефрактометра является возможность проведения обследования у самых маленьких пациентов – детей с 6ти месяцев
+						

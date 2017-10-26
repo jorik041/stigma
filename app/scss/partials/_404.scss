@@ -1,0 +1,97 @@
+.not-found-page {
+  margin-bottom: rem(120px);
+}
+
+.not-found-page__img {
+  margin-right: rem(50px);
+  display: inline-block;
+  vertical-align: top;
+  width: 35%;
+
+  @include laptop {
+    margin-right: 0;  
+    margin: auto;
+    margin-bottom: 40px;
+    display: block;
+    width: 50%;
+  }
+
+  @include tablets {
+    width: 95%;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.not-found-page__body {
+  display: inline-block;  
+  width: 55%;
+  font-family: $main-font;  
+
+  @include laptop {
+    margin: auto;
+    display: block;
+    width: 70%;
+  }
+
+  @include tablets {
+    width: 95%;
+  }
+}
+
+.not-found-page__title {
+  margin-bottom: 50px;
+  margin-right: 40px;
+  font-family: $main-font;
+  font-weight: 700;
+  font-size: 38px;
+  color: $seconds-color;
+
+  @include tablets {
+    margin-right: 0px;
+    font-size: 24px;  
+  }
+
+  @include phones {
+    font-size: 18px; 
+  }
+}
+
+.not-found-page__text {
+  font-family: $main-font;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 36px;
+  color: $seconds-color;
+
+  @include tablets {
+    font-size: 16px;
+  }
+
+  @include phones {
+    font-size: 14px;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+ul.not-found-page__links {
+  padding-left: 20px;
+  font-weight: 600;
+
+  a {
+    color: inherit;
+  }
+
+  a:hover {
+    color: $main-color;
+  }
+}
+

@@ -1,0 +1,123 @@
+.icon {
+	display: inline-block;
+	height: 1em;
+	width: 1em;
+	fill: inherit;
+	stroke: inherit;
+}
+
+.icon-search, .icon-cart {
+  position: relative;
+  z-index: 1;
+  font-size:17px;
+	width:(66/64)+em;
+}
+
+.header__search {
+  fill: #323232;
+}
+
+.header__cart, 
+.header__compaire {
+  margin-right: 10px;
+}
+
+.about__icon {
+  font-size: 40px;
+  fill: var( --main-color);
+}
+
+.popular__icon {
+  font-size: 13px;
+  fill: #323232;
+}
+
+.popular__icon-card, .icon-card--yellow {
+  font-size: 18px;
+  fill: #323232;
+  transition: all .2s ease;
+}
+
+svg.icon-card--yellow {
+  fill: $main-color;  
+}
+
+svg.icon-card--black {
+  fill: $seconds-color;  
+}
+
+.footer__icon {
+  font-size: 25px;
+  fill:#ffffff;
+
+  &:hover {
+    fill: var(--main-color);
+  }
+}
+
+.icon-rouble {
+  font-size: 13px;
+}
+
+.menu-left__search {
+  fill: #fff;
+  position: absolute;
+  right: 20px;
+  top: 25px;
+}
+
+#icon-slide-prev, 
+#icon-slide-next{
+  fill: #323232;
+}
+
+#icon-slide-prev:hover  polygon#slide-prev-arr, 
+#icon-slide-next:hover  polygon#slide-next-arr {
+  fill: #323232;
+}
+
+#icon-slide-prev:hover, 
+#icon-slide-next:hover {
+  fill: var(--main-color);
+  
+}
+
+#slide-prev-arr, 
+#slide-next-arr {
+   fill: #ffcb23;
+}
+
+.icon-arrow_left, 
+.icon-arrow_right {
+  font-size: 40px;
+  fill: #b4b4b4;
+
+  &:hover {
+    fill: var(--seconds-color);
+  }
+}
+
+.price__cart {
+  font-size: 18px;
+  fill: var(--main-color);
+}
+
+svg.about__icon {
+  fill: $main-color;
+}
+
+svg.icon-person {
+  width: .5em;
+
+  @include tablets {
+    width: 1em;  
+  }
+}
+
+svg.icon-arrow_left,
+svg.icon-arrow_right {
+  fill: $light-color;
+  &:hover {
+    fill: $seconds-color;
+  }
+}

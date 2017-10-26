@@ -1,0 +1,215 @@
+block vars
+	- var active
+	-
+		var title = title || ''
+		var description = description || ''
+		var image = image || ''
+	-
+		var html = {
+			attrs: {
+				lang: 'ru'
+			},
+			classList: []
+		}
+	-
+		var body = {
+			attrs: {},
+			classList: []
+		}
+doctype html
+html(class=html.classList)&attributes(html.attrs)
+	head
+		meta(charset='utf-8')
+		meta(http-equiv='x-ua-compatible', content='ie=edge')
+		title
+			= title
+		meta(name='description', content='')
+		meta(name='viewport', content='width=device-width, initial-scale=1')
+		link(rel='manifest', href='site.webmanifest')
+		link(rel="shortcut icon" href="/favicon.ico" type="image/x-icon")
+		link(rel="icon" href="/favicon.ico" type="image/x-icon")
+		link(rel='apple-touch-icon', href='icon.png')
+		link(rel="stylesheet", href="css/style.css")
+	body(class=body.classList)&attributes(body.attrs)
+		.content
+			include partials/spritesvg
+			include mixins/getSvg
+			include mixins/top-nav
+			include mixins/bottom-nav
+			include mixins/crumbs
+			include mixins/share					
+			block header
+				.search-block
+					input(type="text" placeholder="Поиск..." ).search__input
+				.menu-left
+					a(href='/').menu__search
+						+icon('search', 'menu-left__search')
+					.call-to-action
+						a(href="") Записаться на прием
+					.nav__right
+						+bottomNav()
+						+topNav()
+				.container-burger
+					.burger-wrap.js-burger
+						.burger
+							span &nbsp;
+							span &nbsp;
+							span &nbsp;
+				header.header
+					.header__top.header--black
+						.container
+							.nav
+								+topNav()
+								.header__call-to-action
+									a(href="") Записаться на прием
+					.header__center
+						.container.header__center-wrap
+							.header__logo
+								a(href="/")
+									img(src="images/logo-header.png", alt="Стигма")
+							.header__center__call
+								span 8 800 000 11 22
+								a(href="#").js-callback Заказать обратный звонок
+							.header__center__search
+								input(type="search" placeholder="Поиск...").search__input.header__search__input
+								span.search__icon
+									+icon('search', 'header__search')
+									input(type="submit" value="").search__btn
+								span.header__search_result
+									ul.search__list
+										li
+											span Контактные линзы:
+											a(href="#") Acuvue Oasys
+							.header__card
+								ul.header__card__list
+									li
+										a(href="/cart.html").card.js-card
+											+icon('cart', 'header__cart')
+											span Корзина -
+											span.count  2 товара
+											span.count-on-mobile (2)
+										.modal.modal-card.js-modal-card
+											.modal__header
+												span.title Корзина
+											.modal-card__body
+												.modal__row
+													.modal-card__header
+														.title Acuvue Oasys
+														button(class="close js-clear-card" type="button" data-dismiss="modal" aria-label="Close")
+															span(aria-hidden="true") ×
+													.modal-card__body-count 
+														span.count-up
+														span.count 3 шт.
+														span.count-down
+														span.price 
+															span 4,140
+															span
+																span
+																	+icon('rouble', 'card__rouble')
+												.modal__row
+													.modal-card__header
+														.title Acuvue Oasys Hydraclear
+														button(class="close js-clear-card" type="button" data-dismiss="modal" aria-label="Close")
+															span(aria-hidden="true") ×
+													.modal-card__body-count 
+														span.count-up
+														span.count 3 шт.
+														span.count-down
+														span.price 
+															span 4,140
+															span
+																+icon('rouble', 'card__rouble')
+												.modal__row
+													.modal-card__header
+														.title Acuvue Hydraclear
+														button(class="close js-clear-card" type="button" data-dismiss="modal" aria-label="Close")
+															span(aria-hidden="true") ×
+													.modal-card__body-count 
+														span.count-up
+														span.count 3 шт.
+														span.count-down
+														span.price 
+															span 4,140
+															span
+																+icon('rouble', 'card__rouble')
+												.modal__row.total-row
+													span.total Итого:
+													span.total-count 8,280
+													span
+														+icon('rouble', 'card__rouble')
+												a(href="/ordering.html").button Оформить заказ
+									li
+										a(href="/compaire.html").compair
+											+icon('compaire', 'header__compaire')
+											span Сравнения
+											span.count 2
+					.header__bottom
+						.container
+							.nav.js-nav
+								+bottomNav()
+			block content
+		block footer
+			footer.footer
+				.container
+					ul.footer-menu__list
+						li.footer-menu__item
+							a(href="/").footer-menu__logo
+								img(src="images/footer-logo.png", alt="Стигма")
+								span.footer-menu__copyright © Оптика Стигма 2014 - 2017
+						li.footer-menu__item
+							ul.footer-menu__inner.footer__nav
+								span.footer__title Клиентам
+								li
+									a(href="/products-card.html") Товары
+								li
+									a(href="") Услуги
+								li
+									a(href="/sale.html") Акции
+								li
+									a(href="/payment.html") Оплата и доставка
+								li
+									a(href="") Полезное
+						li.footer-menu__item
+							ul.footer-menu__inner.footer__nav
+									span.footer__title Оптика «Стигма»
+									li
+										a(href="/about.html") О нас
+									li
+										a(href="/contacts.html") Контакты
+									li
+										a(href="/news.html") Новости
+						li.footer-menu__item.footer-menu__bar
+							ul.footer-menu__inner.footer-menu--right-text
+								li
+									a(href="").footer-menu__contacts 8 800 111 22 33
+								li
+									a(href="").footer-menu__contacts Info@optica-stigma.ru
+								li
+									ul.footer-socials__list
+										li
+											a(href="" title="Мы в Инстаграмм")
+												+icon('instagram', 'footer__icon')
+										li
+											a(href="" title="Мы в ВК")
+												+icon('vk', 'footer__icon')
+										li
+											a(href="" title="Мы в Фейсбук")
+												+icon('fb', 'footer__icon')
+										li
+											a(href="" title="Мы в Твиттер")
+												+icon('twitter', 'footer__icon')
+										li
+											a(href="" title="Мы в Одноклассниках")
+												+icon('ok', 'footer__icon')
+								.footer__search
+									input(type="search" placeholder="Ваш e-mail...").search__input
+									span.search__icon
+										+icon('send')
+										input(type="submit" value="").search__btn
+		.modal-backdrop
+		include partials/modal
+		block scripts
+			script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+			script(src="js/slick.min.js")
+			script(src="js/main.js")
+			script(src="js/form.js")

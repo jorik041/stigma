@@ -1,0 +1,33 @@
+.modal-callback.js-modal-callback
+  .modal
+    .modal__header.modal-callback__header
+      span.title Заказать обратный звонок
+      button(class="close js-close" type="button" data-dismiss="modal" aria-label="Close")
+        span(aria-hidden="true") ×
+    form.modal-callback__form.js-form.form
+      .modal-callback__inputs
+        .form-group
+          .input__wrap
+            input.form__input(type="text" id="name" name="name" )
+            button(class="close clear js-clear" type="button" data-dismiss="modal" aria-label="Close")
+              span(aria-hidden="true") ×
+            label(for="name") Ваше имя
+          #error_msg Введите ваше имя
+        .form-group
+          .input__wrap
+            input.form__input(type="phone" id="phone" name="phone" )
+            button(class="close clear js-clear" type="button" data-dismiss="modal" aria-label="Close")
+              span(aria-hidden="true") ×
+            label(for="phone") Ваш телефон
+          #error_msg Введите ваше телефон
+        .form-group
+          select.form__select
+            option(value="city"  class="placeholder" selected disabled) Город
+            option(value="mahachkala") Махачкала
+            option(value="derbent") Дербент
+            option(value="nalchik") Нальчик
+        .form-group
+          .input__wrap
+            textarea.form__textarea(name="comment", id="comment" cols="30", rows="10" )
+            label(for="comment") Дополнительные комментарии
+      button(type="submit").button.js-bottom Оставить заявку	

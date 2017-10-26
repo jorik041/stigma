@@ -1,0 +1,78 @@
+.character-tabs {
+  margin-bottom: 100px;
+  width: 100%;
+  display: inline-block;
+  border: 1px solid #ededed;
+  font-size: 0;
+
+  @include tablets {
+    margin-bottom: 50px;  
+  }
+
+  label {
+    display: inline-block;
+    padding-bottom: 25px;
+    font-family: $main-font;
+    text-transform: uppercase;
+    color: $seconds-color;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-bottom: 5px solid transparent;
+    cursor: pointer;
+
+    @include phones {
+      font-size: 12px;
+      margin-bottom: 20px;
+      padding-bottom: 20px;    
+    }
+  }
+
+  input:checked + label {
+    border-bottom-color:  $main-color;    
+  }
+  
+}
+
+.character-tabs__wrapp {
+  padding: 50px 100px;
+  padding-bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-bottom: 1px solid #ededed;
+
+  @include tablets {
+    padding: 20px;
+    padding-bottom: 0;
+  }
+
+  @include phones {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
+
+.tab-1, 
+.tab-2, 
+.tab-3{
+  display: none;
+}
+
+.character-tabs__content {
+  padding: 25px 30px;
+  flex-basis: 100%;
+  font-family: $main-font;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: $light-color;
+
+  @include phones {
+    font-size: 14px;
+  }
+
+  p {
+    margin: 0;
+  }
+}

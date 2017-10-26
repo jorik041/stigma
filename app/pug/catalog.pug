@@ -1,0 +1,93 @@
+extends layout
+append vars
+	- title = 'Контактные линзы | Стигма'
+block content
+	.container
+		+crumbs([ ['Главная', '/'], ['Контактные линзы', '/catalog.html' ]], 1)
+	section.catalog-page
+		.container
+			.block-title Контактные линзы
+			.sort-top
+				span.sort-top__title Сортировать по:
+				a(href="/").sort-top__name Названию
+				a(href="/").sort-top__price.active Цене
+			.catalog
+				aside.filter-section
+					form(action="" method="")
+						.filter-section__row.filter-section__row-toggle.js-filter-section__row-toggle
+							.filter-section__header
+								.filter-section__title Производители
+								.filter-section__toggle.js-filter-section__toggle.on-laptop Свернуть
+							.filter-section__block
+								- for ( let i = 1; i < 6; i++)
+									.form__checkbox.filter-section__checkbox
+										input(type="checkbox", name="" id=`manufacturer-${i}`)
+										label(for=`manufacturer-${i}`)
+											span.form__checkbox__fake
+											span.form__checkbox__label= `Подкатегория ${i}`
+						.filter-section__row.filter-section__row-toggle.js-filter-section__row-toggle
+							.filter-section__header
+								.filter-section__title Бренды
+								.filter-section__toggle.js-filter-section__toggle.on-laptop Свернуть
+							.filter-section__block
+								- for ( let i = 1; i < 4; i++)
+									.form__checkbox.filter-section__checkbox
+										input(type="checkbox", name="" id=`brand-${i}`)
+										label(for=`brand-${i}`)
+											span.form__checkbox__fake
+											span.form__checkbox__label= `Подкатегория ${i}`
+						.filter-section__row.filter-section__row-toggle.js-filter-section__row-toggle.open
+							.filter-section__header
+								.filter-section__title Фильтр
+								.filter-section__toggle.js-filter-section__toggle Свернуть
+							.filter-section__filters.js-filter-section__filters
+								a(href="" data-toggle='toggle') 
+									span Фильтр 1
+								a(href="" data-toggle='toggle') 
+									span Фильтр 2
+								a(href="" data-toggle='toggle') 
+									span Фильтр 3
+						.filter-section__row
+							.filter-section__price
+								input#amount.filter-section__range__title(type='text', readonly)
+								#slider-range.filter-section__range
+						.filter-section__row
+							.filter-section__btn
+								button(type="submit").button.button-grey.filter-btn Применить
+								button(type="reset").button.button-transparent.button-no-border.filter-section__clear Сбросить фильтр														
+				section.search-result
+					ul.goods__list
+							- for(let i=0; i<9; i++)
+								li
+									img(src="images/goods.png", alt="Товар")
+									h3 Acuvue Oasys
+									p Cиликон-гидрогелевые линзы для длительного ношения
+									a(href="", class="popular__compaire") 
+											span
+												+icon('compaire', 'popular__icon')
+											span Добавить к сравнению
+									a(href="", class="popular__bay") 
+										span(title='Купить') 1,380
+										span.popular__rouble
+											+icon('rouble')
+										span.popular__card
+											+icon('cart', 'popular__icon-card')
+					.pagination
+						ul.pagination__list
+							li.pagination__item.pagination__item--prev
+								a(href="/").pagination__link
+									.pagination__mark
+							- for ( let i = 1; i < 6; i++)
+									li.pagination__item
+										a(href="/" class=`${i===1 ? 'active' : ''}`).pagination__link
+											.pagination__mark= i
+							li.pagination__item.pagination__item--next
+								a(href="/").pagination__link
+									.pagination__mark
+	.container-out
+		.container
+			include partials/product-card__footer
+block append scripts
+	script(src="js/jquery-ui.min.js")
+	script(src="js/catalog.js")
+		

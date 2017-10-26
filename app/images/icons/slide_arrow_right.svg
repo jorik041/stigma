@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #323232;
+      }
+
+      .cls-2 {
+        fill: #ffcb23;
+      }
+    </style>
+  </defs>
+  <title>Ресурс 7</title>
+  <g id="Слой_2" data-name="Слой 2">
+    <g id="Слой_1-2" data-name="Слой 1">
+      <rect class="cls-1" width="40" height="40" transform="translate(40 40) rotate(180)" />
+      <polygon class="cls-2" points="21.45 19.7 15.44 13.69 16.14 12.97 16.84 12.27 24.32 19.73 24.57 20 24.3 20.25 22.86 21.7 16.84 27.73 15.44 26.32 21.46 20.3 21.75 20 21.45 19.7"
+      />
+    </g>
+  </g>
+</svg>

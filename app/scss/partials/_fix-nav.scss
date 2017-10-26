@@ -1,0 +1,140 @@
+.fixed-nav {
+
+
+    .burger-wrap {
+        display: block;
+    }
+
+    .header__center-wrap {
+        justify-content: flex-start;
+    }
+
+    .header__top, 
+    .header__bottom {
+      //display: none;
+    }
+
+    .header__center {
+      position: fixed;
+      top: 0;
+      z-index: 11;
+      background-color: #fff;
+      width: 100%;
+      transition: var(--transition-for-top);
+      padding: 14px 0;
+      border-bottom: 1px solid #ededed;
+      box-shadow: 3px 4px 50px rgba(126, 126, 126, 0.07);
+      
+      .header__center__search {
+        display: none;
+      }
+    }
+
+    .header__center__call {
+        margin-left: 9%;
+        span {
+            display: inline-block;
+            margin-right: 10px;
+        }
+    }
+
+    .header__logo {
+        margin-left: 60px;
+    }
+
+    .header__card__list {
+        flex-direction: row-reverse;
+    }
+
+    .header__phone {
+        margin-left: 10%;
+
+        @include desktop {
+            margin-left: 5%;
+        }
+
+        span {
+            @include laptop {
+                display: block;
+            }
+        }
+
+        a {
+            @include laptop {
+                margin-left: 0;
+            }
+        }
+        
+    }
+
+    .header__card {
+        flex-basis: 31%;
+        margin-left: 10%;
+
+        @include desktop {
+            flex-basis: 31.5%;
+            margin-left: 3%;
+        }
+        .header__card__list {
+            display: flex;
+            align-items: center;
+        }
+
+        @include laptop {
+            margin-left: auto;
+        }
+    
+    }
+
+    .header__card__list {
+        margin: 0;
+
+        li {
+            margin-bottom: 0;
+        }
+
+         li + li {
+            margin-left: 15px;
+            margin-right: auto;
+
+            @include desktop {
+                margin-left: 0;
+            }
+
+            @include laptop {
+                margin-right: 0;
+            }
+
+            @include phones {
+                margin-right: 0;
+            }
+        }
+    }
+
+    .header__logo {
+        width: 151px;
+        height: 32px;
+
+        @include desktop {
+            width: 160px;
+        }
+
+        @include laptop {
+            display: none;
+        }
+    }
+}
+
+.count-on-mobile {
+    display: none;
+
+    @include laptop {
+        display: inline-block;
+    }
+}
+
+.count {
+    @include laptop {
+        display: none;
+    }
+}

@@ -1,0 +1,55 @@
+.sale__list  {
+  padding: 0;
+  width: 100%;
+  max-width: 920px;
+  margin: auto;
+
+  li {
+    margin-bottom: 100px;
+    font-family: $main-font;
+    color: $seconds-color;
+    
+    & > span {
+      display: inline-block;
+      margin-bottom: 35px;
+      font-size: 26px;
+      font-weight: 600;
+      line-height: 30px;
+
+      @include phones {
+        font-size: 18px;
+      }
+    }
+
+    img {
+      margin: auto;
+      margin-bottom: 30px;
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    p {
+      margin: 0;
+      color: $light-color;
+      font-size: 16px;
+      font-weight: 100;
+      line-height: 30px;
+
+      span {
+        color: $seconds-color;
+        font-weight: 600;
+      }
+    }
+
+    a {
+      margin-left: 10px;
+      display: inline-block;
+      border-bottom: 1px dashed #2f2f2f;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 24px;
+      color: $seconds-color;
+    }
+  }//li
+}//sale__list

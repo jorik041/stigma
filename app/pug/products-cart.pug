@@ -1,0 +1,129 @@
+extends layout
+append vars
+	- active = 2
+	- title = 'Acuvue Oasys | Стигма'
+block content
+	.container
+		+crumbs([ ['Главная','/'], ['Контактные линзы', '/'], ['Acuvue', '/'], ['Acuvue Oasys', '/'] ], 3)
+	section
+		.container
+			.product-card
+				header.product-card__header 
+					.product-card__title Acuvue Oasys
+					.product-card__article 
+						| Артикул: 
+						span 12345
+				section.product-card__summary
+					.product-card__left
+						.gallery
+							ul.gallery__outter.js-gallery__outter
+								- for(let i = 0; i < 7; i++)
+									li.gallery__outer-item
+										img(src="images/gallery.png", alt="")
+							.gallery__control-wrqp
+								button.carousel__control.gallery__control.gallery__control--next.js-gallery__control-next
+									span
+										+icon('prev')
+								button.carousel__control.gallery__control.gallery__control--prev.js-gallery__control-prev
+									span
+										+icon('next')
+							ul.gallery__thumbs.js-gallery__thumbs
+								- for(let i = 0; i < 10; i++)
+									li.gallery__thumbs-item
+										img(src="images/prod-thumb.png", alt="")
+						.product-card__descripton
+							.product-card__character-block
+								ul
+									li
+										span Частота замены:
+										span 2 недели
+									li
+										span Материал
+										span Карбон
+									li
+										span Диаметр
+										span 14.0 мм
+									li
+										span Пропуск кислорода: 
+										span 147 Dk/t
+							.product-card__character-block  
+								ul
+									li
+										span Влагосодержание:
+										span 38% 
+									li
+										span УФ-защита: 
+										span Есть 
+									li
+										span Количество: 
+										span 6 шт. 
+									li
+										span Серия:  
+										span Oasys
+						include partials/character-tabs
+					.product-card__right
+						.product-card__offer
+							.product-card__offer_wrap
+								.product-card__offer-price 1,380
+									+icon('rouble')
+								.product-card__offer-oldprice 
+									| Старая цена: 
+									span 1,500
+										+icon('rouble')
+								.product-card__offer-available 
+									| В наличии: 
+									span есть
+							.product-card__offer-desc
+								.product-card__offer-desc-item Сила
+									.count-down
+								.product-card__offer-desc-item Кривизна
+									.count-down
+								.product-card__offer-desc-item 
+									| Кол-во:
+									.counter-wrap
+										.count-up
+										span.count 3
+										.count-down
+							.product-card__offer-buttons
+								a(href='#').button.button-compare.button-transparent
+									| К сравнению
+									+icon('compaire', 'button__compaire')
+								a(href='#').button.button--black
+									| Купить
+									+icon('cart', 'icon-card--yellow')
+								a(href='#').button.button-transparent.button-small
+									| Купить в один клик
+							.product-card__offer-delivery
+								span Доставка от: 
+									span 300
+										+icon('rouble')
+								a(href="") Подробнее о доставке
+						.share
+							span Поделиться:
+							ul.socials__list
+								- const social = ['fb-fill', 'vk-fill', 'tw-fill', 'ok-fill']
+									each item in social
+										li
+											a(href="")
+												+icon(`${item}`, 'social__icon')
+				.recommendations
+					.block-title Рекомендуем
+					ul.recomendations__list.goods__list
+						- for(let i=0; i<4; i++)
+							li
+								img(src="images/goods.png", alt="Товар")
+								h3 Acuvue Oasys
+								p Cиликон-гидрогелевые линзы для длительного ношения
+								a(href="", class="popular__compaire") 
+										span
+											+icon('compaire', 'popular__icon')
+										span Добавить к сравнению
+								a(href="", class="popular__bay") 
+									span(title='Купить') 1,380
+									span.popular__rouble
+										+icon('rouble')
+									span.popular__card
+										+icon('cart', 'popular__icon-card')
+				include partials/product-card__footer
+block append scripts
+	script(src="js/slider.js")

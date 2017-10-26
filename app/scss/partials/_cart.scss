@@ -1,0 +1,197 @@
+.cart-block {
+  margin-bottom: rem(120px);
+  padding-top: 40px;
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+.cart__list {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 40px;
+  padding-bottom: 40px;  
+  display: flex;
+  flex-direction: column;
+
+  @include laptop {
+    flex-direction: row;
+  }
+
+  @include phones {
+    flex-direction: column;
+  }
+}
+
+.cart__item {
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  border-bottom: 1px solid #ededed;
+
+  @include laptop {
+    padding-top: 0;
+    width: 50%;   
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @include phones {
+    padding-top: 40px;    
+    width: 100%;
+  }
+
+  &:first-child {
+    padding-top: 0;
+  }
+
+  &:last-child {
+  }
+}
+
+.cart__product_photo {
+  margin-right: 50px;
+  width: 139px;
+  height: 90px;
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  @include laptop {
+    margin-right: 0px;
+    margin-bottom: 50px;
+  }
+}
+
+.cart__descripton_list {
+  padding: 0;
+  margin: 0;
+}
+
+.cart__descripton {
+  flex-basis: 34%;
+  font-family: $main-font;
+
+  @include laptop {
+    margin-bottom: 30px;
+  }
+}
+
+.cart__product_title {
+  margin-bottom: 20px;
+  display: inline-block;
+  font-weight: 400;  
+  font-size: 20px;
+  color: $seconds-color;
+  cursor: pointer;
+  
+  &:hover {
+    color: $main-color;
+  }
+}
+
+.cart__product_code, .cart__descripton_list {
+  margin-bottom: 20px;  
+  font-family: $main-font;
+  font-size: 16px;
+  font-weight: 400;
+
+  span:first-child {
+    color: $light-color;
+  }
+
+  span:last-child {
+    color: $seconds-color;
+  }
+}
+
+.cart__descripton_list {
+  li {
+    margin-bottom: 13px;
+  }
+}
+.cart__count {
+  flex-basis: 29%;
+  color: $seconds-color;
+  font-family: $main-font;
+  font-size: 16px;
+  font-weight: 400;
+
+  @include laptop {
+    margin-bottom: 30px;
+  }
+
+  .count {
+    @include laptop {
+      display: inline-block;
+    }
+  }
+}
+
+.cart__total {
+  display: inline-block;
+  margin-right: 30px;
+}
+
+.cart__price {
+  .price {
+    font-weight: 600;
+    font-size: 20px;
+  }
+
+  .icon-rouble {
+    font-size: 14px;
+  }
+}
+
+.cart__remove {
+  margin-left: auto;
+  margin-right: 35px;
+  font-size: 20px;
+
+  &:hover button {
+    color: $main-color;
+  }
+
+  @include laptop {
+    position: absolute;
+    right: 0;
+  }
+}
+
+.cart-bay {
+  width: 100%;
+  max-width: 255px;
+  float: right;
+}
+
+.cart-bay-wrap {
+  margin-bottom: 35px;
+  color: $seconds-color;
+  font-family: "Gotham Pro Med"; 
+  font-size: 20px;
+
+  .cart__total {
+    font-size: 18px;
+  }
+
+  .icon-rouble {
+    font-size: 14px;
+  }
+
+  .cart__total {
+    margin-right: 0;
+  }
+}
+
+.price {
+  white-space: nowrap;
+}

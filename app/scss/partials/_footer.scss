@@ -1,0 +1,177 @@
+.footer {
+  padding: 85px 0;
+  background-color: #323232;
+
+  @include laptop { 
+    padding: 10px 0;
+  }
+
+  &__title {
+    display: inline-block;
+    color: #ffffff;
+    font-family: var(--main-font);
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 23px;
+  }
+
+  &-menu__item {
+    @include laptop { 
+      margin-bottom: 15px;
+
+      &:nth-child(2) {
+        @include phones {
+          flex-grow: 2;
+        }
+      }
+
+      &:nth-child(3) {
+        flex-basis: 45%;
+
+        @include phones {
+          flex-grow: 1;
+          flex-basis: 25%;
+        }
+        
+      }
+
+      &:nth-child(1) {
+        margin: auto;
+        margin-top: 20px;
+        order: 1;
+        flex-basis: 46%;
+        text-align: center;        
+      }
+    }
+  }
+
+}
+
+.footer-menu__list {
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  line-height: 2em;
+
+  li {
+    flex-basis: 25%;
+    @include laptop {
+      flex-basis: 15%;
+    }
+  }
+
+  @include laptop {    
+    flex-flow: row wrap;
+  }
+}
+
+.footer-menu__logo {
+  display:  inline-block;
+  width: 219px;
+
+  img {
+    object-fit: cover;
+    width: 100%;
+  }
+
+  margin-bottom: 20px;
+}
+
+.footer-menu__copyright {
+  color: #ffffff;
+  font-family: var(--main-font);
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.footer-menu__inner {
+  li {
+    color: #ffffff;
+    font-family: var(--main-font);
+    font-size: 16px;
+    font-weight: 400;
+  }
+}
+
+.footer-menu__contacts {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.footer__search {
+  position: relative;
+  border: 1px solid #888888;
+  display: flex;
+  align-items: center;
+
+  .search__input {
+    background-color: transparent;
+    border: 0;
+    outline: none;
+
+    @include phones {
+      width: 100%;
+    }
+
+  }
+
+  .search__icon {
+    position: absolute;
+    right: 0;
+    background-color: #feca23;
+  }
+
+  .search__btn {
+    top: 0;
+    left: 0;
+  }
+}
+
+.footer-menu__inner {
+  padding: 0;
+}
+
+.footer-menu--right-text {
+  text-align: right;
+
+  @include laptop {
+   text-align: left;
+  }
+}
+
+.footer-socials__list {
+  padding: 0;
+  margin-top: 28px;
+  margin-bottom: 18px;
+  display: flex;
+  justify-content: flex-end;
+
+  @include laptop {
+    justify-content: flex-start;
+  }
+
+  li {
+    svg {
+      fill: #fff;
+    }
+    @include phones {
+      margin-left: 0;
+    }
+    
+  }
+}
+
+.footer-menu__item.footer-menu__bar {
+  @include laptop {
+    flex-basis: 100%;
+  }
+}
+
+.footer__nav {
+  a {
+    transition: all .25s ease;
+  }
+  a:hover {
+    color: var(--main-color);
+  }
+}

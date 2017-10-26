@@ -1,0 +1,183 @@
+
+.button {
+  display: inline-block;
+  width: 100%;
+  padding: 25px;
+  background: var(--main-color);
+  border: 0;
+  cursor: pointer;
+  color: #323232;
+  font-family: "Gotham Pro Bold";
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+
+  .icon-cart {
+      vertical-align: bottom;
+  }
+}
+
+.bottom-captcha {
+  color: $seconds-color;
+  font-family: $main-font;
+  font-size: 16px;
+  text-transform: none;
+  font-weight: 600;
+}
+
+.button--grey {
+  background-color: #d0d0d0;
+}
+
+.button--small {
+  width: 51%;
+}
+
+.popular__bay {
+  border: 3px solid var(--main-color);
+  background-color: #fff;
+  transition: all 0.25s ease;
+  line-height: 24px;
+
+  .popular__card {
+      display: none;
+      transition: all .2s ease;
+  }
+
+  .popular__rouble  {
+      opacity: 1;
+      transition: all .2s ease;
+  }
+
+  &:hover {
+      color: var(--main-color);
+      background-color: #ffcb23 ;
+  }//.popular__bay:hover 
+
+  &:hover .popular__card {
+      display: inline-block;
+      vertical-align: middle;
+  }
+  &:hover .popular__rouble {
+      opacity: 0;
+      visibility: hidden;
+  }
+
+  &:hover .popular__icon-card {
+      fill: #fff;
+  }
+  
+  & > span:after {
+      content: attr(title);
+      opacity: 0;
+      visibility: hidden;            
+      position: absolute; 
+      left: 41%;
+      transform: translate(-50%);
+      color: #fff;
+      transition: all .2s ease;
+  }//.popular__bay:after 
+
+  &:hover span:after {
+      content: attr(title);
+      font-size: 14px;
+      letter-spacing: 4px;
+      opacity: 1;
+      visibility: visible;            
+      transition: all .2s ease;
+  }//.popular__bay::hover:after  
+
+  &:active span:after {
+      color: #fff;
+  }
+
+  &:active .popular__icon-card {
+      fill: #fff;
+  }
+
+  &:active {
+      border-color: #fff;
+  }
+}//.popular__bay 
+
+
+
+.popular__compaire {
+  padding: 20px 0;
+  display: flex;
+  width: 80%;
+  margin-bottom: 15px;
+  color: var( --seconds-color);
+  font-family: var(--main-font);
+  font-weight: 600;
+  font-size: 16px;
+  opacity: .5;
+  transition: all .25s ease;
+
+  &:hover{
+      opacity: 1;
+  }
+
+  span:first-child {
+      margin-right: auto;
+  }
+
+  @include tablets {
+      width: 70%;
+      padding: 10px 0;
+      font-size: 14px;
+  }
+}
+
+.popular__bay {
+  .popular__rouble {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+  }
+
+  .popular__card {
+      width: 18px;
+      height: 18px;
+  }
+}
+
+.button-transparent {
+    padding: 20.5px 25px;
+    background-color: transparent;
+    border: 3px solid $seconds-color;
+    white-space: nowrap;
+
+    @include phones {
+        padding: 15px;
+    }
+}
+
+.button-smallds-color {
+    padding-right: 10px;
+    padding-left: 10px;    
+}
+
+.button-small {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.button--black {
+    background-color: $seconds-color;
+    color: $main-color;
+}
+
+.button--yellow {
+    background-color: $main-color;
+    color: $seconds-color;
+}
+
+.button-grey {
+    background-color: #ededed;
+}
+
+.button-no-border {
+    border: 0;
+}

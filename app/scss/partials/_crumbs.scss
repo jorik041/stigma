@@ -1,0 +1,57 @@
+.crumbs {
+
+  font-family: $main-font;
+  font-size: 16px;
+  font-weight: 400;
+
+  @include laptop {
+    margin-top: 100px;
+  }
+
+  @include tablets {
+    font-size: 14px;  
+  }
+
+  @include phones {
+    font-size: 12px;  
+  }
+
+  a { 
+    color: $seconds-color;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  li { 
+    padding-right: 8px;
+    &:hover:last-child a {
+      text-decoration: none;
+    }
+  }
+
+  li:after {
+    content: '/';
+    margin-left: 8px;
+    display: inline-block;
+    color: $main-color;
+  }
+
+  li.active {
+    a {
+      color: $light-color;
+    }
+
+    &:after {
+      content: '';
+      display: inline-block;
+    }
+  }
+}
+
+.crumbs__list {
+  margin: 25px 0;
+  padding: 0;
+  display: flex;
+}

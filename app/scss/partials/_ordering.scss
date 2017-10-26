@@ -1,0 +1,14 @@
+.ordering {
+  margin-bottom: 120px;
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .form__checkbox {
+    margin-bottom: 30px;
+  }
+
+}
